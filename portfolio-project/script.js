@@ -24,3 +24,37 @@ console.log("Sum:", sum);
 
 const product = favNum1 * favNum2;
 console.log("Product:", product);
+
+// Create User Profile Object
+const userProfile = {
+    username: "Ramadhani",
+    age: 25,
+    isLoggedIn: true,
+    skills: ["HTML", "CSS", "JavaScript", "React", "TailwindCSS"]
+};
+
+// Access and Log Data
+console.log("Username:", userProfile.username);
+console.log("Second skill:", userProfile.skills[1]);
+
+// Create a "Welcome" Function
+function displayWelcomeMessage(user) {
+    const welcomeMessage = `Welcome back, ${user.username}! Ready to code today?`;
+    console.log(welcomeMessage);
+}
+
+// Call the welcome function
+displayWelcomeMessage(userProfile);
+
+// Create a "Status Check" Function
+function checkLoginStatus(profile) {
+    if (profile.isLoggedIn) {
+        return "User is currently logged in.";
+    } else {
+        return "User is not logged in.";
+    }
+}
+
+// Call the status check function and store result
+const statusMessage = checkLoginStatus(userProfile);
+console.log(statusMessage);
